@@ -1,12 +1,20 @@
 import './App.css';
-// import { Routes, Route } from "react-router-dom";
-// import NavBar from '../../components/NavBar/NavBar'
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import NavBar from '../../components/NavBar/NavBar'
+import projectsPage from '../ProjectsPage/ProjectsPage';
+import {AboutMePage} from '../AboutMePage/AboutMePage'
+
 
 function App() {
   return (
     <>
-     <h1>Brittany Stidd</h1>
-    <h2>Full Stack Developer</h2>
+    <Router>
+    <NavBar />
+    <Route path="/" element={<AboutMePage />} />
+    <h1>Home</h1>
+
+    </Router>
   </>
   );
 }
